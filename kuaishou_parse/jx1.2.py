@@ -39,6 +39,9 @@ def GetRealUrl(url,n):
 
         # 通过BeautifulSoup提取所有script标签里内容
         soup = BeautifulSoup(share_response,'lxml')
+        #tabVideo = soup.find_all('video') #video
+        #if len(tabVideo)>0:
+        #    print(tabVideo[0]['src'])
         noWaterMarkVideo = soup.select('script[type="text/javascript"]')
         #print(noWaterMarkVideo)
 
